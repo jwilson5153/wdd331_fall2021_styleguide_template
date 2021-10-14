@@ -1,20 +1,21 @@
 {
-  "name": "style-guide-template",
-  "version": "1.0.0",
-  "description": "Boilerplate for a StyleGuide template based off of the CodyHouse template",
-  "main": "index.js",
+  "name": "parcel-demo",
+  "version": "1.0.1",
+  "description": "Boilerplate for a simple parcel based web app",
   "scripts": {
     "prestart": "rimraf build/*",
-    "start": "parcel src/index.html --dist-dir build",
+    "start": "parcel serve src/index.html --dist-dir build",
     "prebuild": "rimraf dist/*",
     "build": "parcel build src/index.html --public-url ./",
-    "watch": "parcel watch src/index.html -dist-dir build/"
+    "watch": "parcel watch src/index.html -d build/",
+    "lint": "eslint src/**/*.js"
   },
   "author": "Shane T",
   "license": "GPL-2.0",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.0.0-beta.2",
-    "parcel": "*",
+    "@babel/preset-env": "^7.14.7",
+    "@parcel/transformer-sass": "^2.0.0-rc.0",
+    "parcel": "next",
     "rimraf": "^3.0.2"
   }
 }
